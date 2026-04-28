@@ -1,5 +1,11 @@
 # Repository setup
 
+## Repository
+
+GitHub: **[github.com/jkuebler3510/catholic-scientist-project](https://github.com/jkuebler3510/catholic-scientist-project)**
+
+The foundation agent should clone this repo and initialize the monorepo inside it. Default branch is `main`; protect it per the rules in this document and in `11-deployment/ci-cd.md`.
+
 ## Package manager
 
 **pnpm** (≥ 9). Reason: best workspace support, content-addressed store, fast installs on CI. Lockfile is committed.

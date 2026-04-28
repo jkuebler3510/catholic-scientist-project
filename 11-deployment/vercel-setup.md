@@ -2,7 +2,7 @@
 
 ## Project
 
-- Connect the GitHub repo to a new Vercel project named `scs-web`.
+- Connect the GitHub repo (**[github.com/jkuebler3510/catholic-scientist-project](https://github.com/jkuebler3510/catholic-scientist-project)**) to a new Vercel project named `scs-web`.
 - Root directory: `apps/web`.
 - Framework preset: Next.js (auto-detected).
 - Build command: `cd ../.. && pnpm turbo run build --filter web` (run from root for proper monorepo build).

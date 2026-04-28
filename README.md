@@ -10,6 +10,7 @@ A complete replacement for the existing Society of Catholic Scientists website w
 
 | Area | Choice |
 | --- | --- |
+| Repository | [github.com/jkuebler3510/catholic-scientist-project](https://github.com/jkuebler3510/catholic-scientist-project) |
 | Framework | Next.js 14+ (App Router) + TypeScript |
 | Styling | Tailwind CSS + shadcn/ui component primitives |
 | CMS | Sanity (headless) |

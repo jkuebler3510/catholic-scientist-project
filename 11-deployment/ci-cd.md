@@ -4,6 +4,8 @@
 
 GitHub Actions runs CI; Vercel runs the deploy. They overlap intentionally — Vercel verifies the build, GitHub Actions verifies the tests.
 
+Repo: **[github.com/jkuebler3510/catholic-scientist-project](https://github.com/jkuebler3510/catholic-scientist-project)**.
+
 ## `.github/workflows/ci.yml`
 
 ```yaml
