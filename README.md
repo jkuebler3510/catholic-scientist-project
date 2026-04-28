@@ -58,6 +58,12 @@ Then drill into the numbered subtask folders. Each one has its own `README.md` t
 
 Open `DELEGATION_GUIDE.md` for the full workflow. The short version: each folder's `README.md` contains a ready-to-paste "Agent Brief" with mission, inputs, deliverables, acceptance criteria, and out-of-scope guardrails. Hand the agent a pointer to `/Catholic Scientist Project/<folder>/README.md` plus the relevant top-level docs listed in that brief.
 
+## Workflow rule (read before starting any work)
+
+Every change ships as a **pull request** against `main` on [github.com/jkuebler3510/catholic-scientist-project](https://github.com/jkuebler3510/catholic-scientist-project). Multiple agents will be working in parallel; Joe reviews and merges every PR himself.
+
+The flow: branch (`feat/`, `fix/`, `chore/`, `docs/`, `refactor/` prefix, kebab-case) → commit (Conventional Commits) → push → open a PR with the required description template → wait for Joe's review → Joe merges (squash). **Agents never merge their own PRs.** Full rules and the PR description template live in `DELEGATION_GUIDE.md`.
+
 ## Status
 
 This is the **planning phase**. No code has been written yet. Every folder contains specifications, contracts, and design docs that the implementing agents will turn into a working codebase.

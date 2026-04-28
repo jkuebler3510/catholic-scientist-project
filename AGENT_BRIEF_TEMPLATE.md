@@ -92,4 +92,6 @@ Make these explicit so the agent doesn't drift:
 >
 > **Out of scope.** [Mirror.]
 >
-> **When you finish,** post a summary listing every file created or changed, every route added, every test added, and any open questions you escalated.
+> **Workflow.** Open one or more pull requests against `main` on `github.com/jkuebler3510/catholic-scientist-project`. Use `feat/`, `fix/`, `chore/`, `docs/`, or `refactor/` prefixed kebab-case branch names. Conventional Commits. Fill out the PR description template in full (What / Why / How to verify / Acceptance checklist / Out of scope / Screenshots). Wait for Joe to review and merge — **never merge your own PRs**. See `DELEGATION_GUIDE.md` for the full rule.
+>
+> **When you finish,** post a summary listing every file created or changed, every route added, every test added, every PR you opened (with link), and any open questions you escalated.

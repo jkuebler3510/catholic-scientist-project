@@ -2,6 +2,37 @@
 
 This folder is structured so that each numbered subtask can be assigned to an independent agent (or contributor) without that agent needing to read the rest of the project. This document explains the pattern.
 
+## Workflow rule: every change is a pull request
+
+Every agent working on this project ships their work as a pull request against `main`. No direct commits, no force-pushes, no exceptions. Joe (the project owner) reviews every PR personally — multiple agents will be working in parallel and the PR queue is how he keeps track.
+
+The required flow for any unit of work:
+
+1. **Branch.** From an up-to-date `main`, create a new branch with a descriptive, kebab-case name prefixed by the work type:
+   - `feat/<short-description>` — new feature or capability (e.g. `feat/news-rss-feed`)
+   - `fix/<short-description>` — bug fix
+   - `chore/<short-description>` — tooling, dependencies, config
+   - `docs/<short-description>` — documentation only
+   - `refactor/<short-description>` — code restructure with no behavior change
+   The folder number is helpful context: `feat/04-news-detail-page`, `feat/07-membership-application-form`. Don't dump every change for a folder onto one branch — small, reviewable PRs.
+2. **Commit.** Conventional Commits (`feat:`, `fix:`, `chore:`, etc.). Optional scope after the type matches the folder: `feat(news): paginate the index`.
+3. **Push.** Push the branch to `github.com/jkuebler3510/catholic-scientist-project`.
+4. **Open a PR against `main`.** The PR description must include:
+   - **What.** One paragraph summarizing what changed.
+   - **Why.** Pointer to the subtask folder and the specific deliverable in that folder's README.
+   - **How to verify.** Steps a reviewer can follow on the Vercel preview deploy.
+   - **Acceptance checklist.** Copy the relevant items from the folder's "Acceptance criteria" and check them off.
+   - **Out of scope / follow-ups.** Anything the agent intentionally didn't do, with a note on whether it needs a follow-up issue.
+   - **Screenshots / videos.** For any UI-affecting change.
+5. **Wait for review.** Joe reviews. Vercel auto-deploys a preview per PR; CI must be green. Address feedback in additional commits on the same branch (no force-push unless rebasing onto `main`, and only when explicitly asked).
+6. **Merge.** **Joe merges the PR**, not the agent. Squash-merge is the only allowed merge style. After merge, delete the branch.
+
+If a task is large enough that a single PR would exceed ~600 lines of diff, break it into a sequence of stacked PRs and call out the order in each PR description ("PR 2 of 4 — depends on #N").
+
+Long-running branches are forbidden. Rebase or merge from `main` daily; if a branch is more than five days old, ship what's working or close it.
+
+When the suggested agent prompt at the bottom of a folder's README is handed to an agent, the orchestrator should append: "Open one or more PRs against `github.com/jkuebler3510/catholic-scientist-project` per the workflow rule in `DELEGATION_GUIDE.md`. Joe reviews and merges every PR — do not merge your own work."
+
 ## Subtask folder anatomy
 
 Every subtask folder has the same shape:

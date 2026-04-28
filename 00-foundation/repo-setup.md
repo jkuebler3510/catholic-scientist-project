@@ -69,6 +69,21 @@ Cache the build, typecheck, lint, and test outputs. Set `TURBO_REMOTE_CACHE` onl
 
 ## Branch model
 
-- `main` — protected, deploys to production.
-- Feature branches: `feat/<short-description>`, `fix/<short-description>`.
-- PRs require: passing CI, one approval, no merge commits (squash-merge only).
+- `main` — protected, deploys to production. **No direct commits ever.**
+- Feature branches per the workflow rule in `DELEGATION_GUIDE.md`:
+  - `feat/<short-description>` — new feature
+  - `fix/<short-description>` — bug fix
+  - `chore/<short-description>` — tooling/config
+  - `docs/<short-description>` — docs only
+  - `refactor/<short-description>` — restructure, no behavior change
+- Every change is a pull request against `main`. **Joe (project owner) reviews and merges every PR.** Agents never merge their own work.
+- Branch protection on `main` requires:
+  - Passing CI (typecheck, lint, tests, format).
+  - Successful Vercel preview deploy.
+  - Up-to-date with `main` before merge.
+  - Squash-merge only — no merge commits, no rebase-merges.
+  - Linear history.
+  - Branch deletion on merge (auto).
+- The foundation agent must configure these protections on `main` as part of the initial repo setup.
+
+PR template: see `DELEGATION_GUIDE.md` for the required PR description sections (What / Why / How to verify / Acceptance checklist / Out of scope / Screenshots). The foundation agent should commit a `.github/pull_request_template.md` matching it.
