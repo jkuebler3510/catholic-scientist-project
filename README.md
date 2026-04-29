@@ -60,9 +60,11 @@ Open `DELEGATION_GUIDE.md` for the full workflow. The short version: each folder
 
 ## Workflow rule (read before starting any work)
 
-Every change ships as a **pull request** against `main` on [github.com/jkuebler3510/catholic-scientist-project](https://github.com/jkuebler3510/catholic-scientist-project). Multiple agents will be working in parallel; Joe reviews and merges every PR himself.
+Agents push their own work to [github.com/jkuebler3510/catholic-scientist-project](https://github.com/jkuebler3510/catholic-scientist-project) and **may self-merge** to keep the project moving. There is no human review gate — the **git history is the audit trail**.
 
-The flow: branch (`feat/`, `fix/`, `chore/`, `docs/`, `refactor/` prefix, kebab-case) → commit (Conventional Commits) → push → open a PR with the required description template → wait for Joe's review → Joe merges (squash). **Agents never merge their own PRs.** Full rules and the PR description template live in `DELEGATION_GUIDE.md`.
+The only hard rule: every change ships as a series of **small, focused commits** with descriptive Conventional Commit messages (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`). One logical change per commit. Imperative subject ≤ 72 chars. Body explains *why*, not just what.
+
+For non-trivial work, use a feature branch (`feat/<short-description>`, etc.), open a PR so the Vercel preview deploys, and **squash-merge it yourself once CI is green**. Direct commits to `main` are fine for small isolated changes (typo fixes, dep bumps). CI is the gate, not Joe. Full rules and a good-vs-bad commit example live in `DELEGATION_GUIDE.md`.
 
 ## Status
 

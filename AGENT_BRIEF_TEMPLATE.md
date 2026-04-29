@@ -92,6 +92,6 @@ Make these explicit so the agent doesn't drift:
 >
 > **Out of scope.** [Mirror.]
 >
-> **Workflow.** Open one or more pull requests against `main` on `github.com/jkuebler3510/catholic-scientist-project`. Use `feat/`, `fix/`, `chore/`, `docs/`, or `refactor/` prefixed kebab-case branch names. Conventional Commits. Fill out the PR description template in full (What / Why / How to verify / Acceptance checklist / Out of scope / Screenshots). Wait for Joe to review and merge — **never merge your own PRs**. See `DELEGATION_GUIDE.md` for the full rule.
+> **Workflow.** Push your work to `github.com/jkuebler3510/catholic-scientist-project` as a series of **small, focused commits** with descriptive Conventional Commit messages (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`) — one logical change per commit. Use a feature branch (`feat/<short-description>`, etc.) for non-trivial work, open a PR so the Vercel preview deploys, and **squash-merge it yourself once CI is green**. Direct commits to `main` are fine for small isolated changes. There is no human review gate. See `DELEGATION_GUIDE.md` for full rules and the good-vs-bad commit example.
 >
-> **When you finish,** post a summary listing every file created or changed, every route added, every test added, every PR you opened (with link), and any open questions you escalated.
+> **When you finish,** post a summary listing every file created or changed, every route added, every test added, every commit/PR you landed (with links), and any open questions you escalated.

@@ -31,9 +31,8 @@ A monorepo at the root of the implementation repo with:
 - `.github/workflows/e2e.yml` — Playwright on PR (allowed to fail until pages exist).
 - `.env.example` enumerating every variable the app will need (see `env-vars.md`).
 - `vercel.json` minimum config.
-- `.github/pull_request_template.md` with the PR description template from `DELEGATION_GUIDE.md`.
-- `.github/CODEOWNERS` listing Joe as the required reviewer for every path.
-- Branch protection rules configured on `main` per `repo-setup.md`.
+- `.github/pull_request_template.md` mirroring the brief PR description template in `DELEGATION_GUIDE.md`.
+- Branch protection rules configured on `main` per `repo-setup.md` (CI must pass, no force-pushes, squash-merge only — but **no required-reviewer rule**; agents self-merge).
 - A working `pnpm dev` that boots Next.js and the Studio side-by-side.
 - Decisions made and documented for: ORM (Drizzle vs. Prisma), rate-limit / KV store (Vercel KV vs. Upstash Redis).
 - `CONTRIBUTING.md` covering branch naming, commit style (Conventional Commits), and the PR checklist.

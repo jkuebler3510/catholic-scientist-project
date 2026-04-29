@@ -69,21 +69,20 @@ Cache the build, typecheck, lint, and test outputs. Set `TURBO_REMOTE_CACHE` onl
 
 ## Branch model
 
-- `main` — protected, deploys to production. **No direct commits ever.**
-- Feature branches per the workflow rule in `DELEGATION_GUIDE.md`:
+- `main` — deploys to production. Agents push here directly for small isolated changes (typo fixes, dep bumps, single-file edits) and merge their own feature-branch PRs once CI is green. **There is no human review gate** — see `DELEGATION_GUIDE.md` for the workflow rule.
+- Feature branches (encouraged for any non-trivial change):
   - `feat/<short-description>` — new feature
   - `fix/<short-description>` — bug fix
   - `chore/<short-description>` — tooling/config
   - `docs/<short-description>` — docs only
   - `refactor/<short-description>` — restructure, no behavior change
-- Every change is a pull request against `main`. **Joe (project owner) reviews and merges every PR.** Agents never merge their own work.
-- Branch protection on `main` requires:
-  - Passing CI (typecheck, lint, tests, format).
-  - Successful Vercel preview deploy.
-  - Up-to-date with `main` before merge.
-  - Squash-merge only — no merge commits, no rebase-merges.
+- Branch protection on `main`:
+  - **Passing CI required** — typecheck, lint, format, tests. **CI is the gate, not a human reviewer.**
+  - **No force-pushes to `main`.**
+  - Squash-merge only on PRs (no merge commits, no rebase-merges).
+  - Auto-delete branches on merge.
   - Linear history.
-  - Branch deletion on merge (auto).
-- The foundation agent must configure these protections on `main` as part of the initial repo setup.
+  - Direct commits to `main` are *allowed* for small changes; CI still runs on the push.
+- The foundation agent configures these protections on `main` as part of the initial repo setup.
 
-PR template: see `DELEGATION_GUIDE.md` for the required PR description sections (What / Why / How to verify / Acceptance checklist / Out of scope / Screenshots). The foundation agent should commit a `.github/pull_request_template.md` matching it.
+PR template (used when an agent opens a PR for non-trivial work — most common case): the foundation agent commits a `.github/pull_request_template.md` mirroring the brief description template in `DELEGATION_GUIDE.md` (What & why / How to verify / Acceptance checklist / Screenshots).
