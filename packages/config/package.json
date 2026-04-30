@@ -1,0 +1,28 @@
+{
+  "name": "@catholic-scientists/config",
+  "version": "1.0.0",
+  "description": "Shared configuration for ESLint, TypeScript, Prettier, and Tailwind",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./eslint": "./eslint.config.js",
+    "./prettier": "./prettier.config.js",
+    "./tailwind": "./tailwind.preset.ts",
+    "./tsconfig": "./tsconfig.base.json"
+  },
+  "scripts": {
+    "lint": "echo 'Config package has no linting'",
+    "typecheck": "echo 'Config package has no type checking'"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.17.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.1.0",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}

@@ -1,32 +1,24 @@
-# Decisions to make in the foundation phase
+# Decisions Made in Foundation Phase
 
-The agent working on `00-foundation` is responsible for resolving these and writing the rationale into this file before passing the work downstream.
+**Status: CLOSED.** All open decisions have been resolved and documented below.
 
-## 1. ORM: Drizzle vs. Prisma
+## 1. ORM: Drizzle vs. Prisma — DECIDED: Drizzle
 
-**Recommendation: Drizzle.**
+**Final Decision: Drizzle, with `drizzle-kit` for migrations and the Neon HTTP driver for production.**
 
-Pros (Drizzle): TypeScript-first, no codegen step, lighter runtime (matters on edge/serverless), schema-as-code reads like SQL, edge-compatible drivers exist for Neon. Migrations via `drizzle-kit`.
+Rationale: TypeScript-first design with no codegen step; lighter runtime suitable for edge/serverless; schema-as-code maps naturally to SQL; edge-compatible drivers available for Neon. The slightly smaller community is mitigated by Drizzle's strong momentum in 2024/2025.
 
-Pros (Prisma): More mature ecosystem, friendlier query API for newcomers, excellent DX with Prisma Studio.
+Dependencies:
 
-Cons (Drizzle): Smaller community, schema migration story slightly less polished. Mitigated by Drizzle's strong direction in 2024/2025.
+- `drizzle-orm` and `drizzle-kit` installed in Wave 2 when `07-membership` is implemented
+- `@neon-http/client` for production HTTP driver
+- See `07-membership/database.md` for schema scaffolding
 
-Cons (Prisma): Prisma Client query engine has a startup cost on serverless; the new `prisma/client` driver adapters reduce but don't eliminate this.
+## 2. KV / rate-limit store: Upstash Redis vs. Vercel KV — DECIDED: Upstash Redis
 
-**Decision (final, please confirm):** Drizzle, with `drizzle-kit` for migrations and the Neon HTTP driver for production.
+**Final Decision: Upstash Redis.**
 
-## 2. KV / rate-limit store: Upstash Redis vs. Vercel KV
-
-**Recommendation: Upstash Redis.**
-
-Pros (Upstash): Portable across hosts, generous free tier, official Next.js integration, used heavily by `@upstash/ratelimit`.
-
-Pros (Vercel KV): Integrated billing, same dashboard as the rest of the project.
-
-Reason to prefer Upstash: portability. We don't want to be unable to migrate off Vercel later because we've embedded Vercel-specific data services.
-
-**Decision (final, please confirm):** Upstash Redis.
+Rationale: Portability across hosting platforms is critical. Vercel KV would lock us into Vercel's ecosystem; Upstash Redis works everywhere and has first-class `@upstash/ratelimit` integration. Generous free tier suitable for v1 launch.
 
 ## 3. Component library structure: collocated vs. `packages/ui`
 

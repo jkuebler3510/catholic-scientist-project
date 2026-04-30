@@ -1,0 +1,32 @@
+{
+  "name": "@catholic-scientists/emails",
+  "version": "1.0.0",
+  "description": "Email templates for Society of Catholic Scientists",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./templates": "./src/templates/index.ts"
+  },
+  "scripts": {
+    "dev": "echo 'No dev server for emails'",
+    "build": "echo 'Emails are runtime templates'",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'Emails use parent linter'",
+    "format": "echo 'Emails use parent formatter'",
+    "format:check": "echo 'Emails use parent formatter'",
+    "test": "echo 'No tests yet'"
+  },
+  "dependencies": {
+    "@react-email/components": "^0.0.32",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-email": "^3.0.4",
+    "resend": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
+  }
+}

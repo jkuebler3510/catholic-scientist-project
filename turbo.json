@@ -1,0 +1,34 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "dev": {
+      "cache": false,
+      "interactive": true
+    },
+    "build": {
+      "outputs": [".next/**", "dist/**"],
+      "inputs": ["src/**", "lib/**", "public/**"],
+      "dependsOn": ["^build"]
+    },
+    "typecheck": {
+      "cache": false
+    },
+    "lint": {
+      "cache": false,
+      "outputs": []
+    },
+    "format": {
+      "cache": false,
+      "outputs": []
+    },
+    "format:check": {
+      "cache": false,
+      "outputs": []
+    },
+    "test": {
+      "cache": false,
+      "outputs": ["coverage/**"],
+      "inputs": ["src/**", "lib/**", "**/*.test.ts", "**/*.test.tsx"]
+    }
+  }
+}
