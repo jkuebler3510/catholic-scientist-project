@@ -1,6 +1,7 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
+import { scheduledPublishing } from "@sanity/scheduled-publishing";
 import { schemaTypes } from "./schemas";
 
 const projectId = process.env.SANITY_STUDIO_PROJECT_ID ?? "placeholder";
@@ -11,7 +12,7 @@ export default defineConfig({
   title: "Society of Catholic Scientists",
   projectId,
   dataset,
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool(), visionTool(), scheduledPublishing()],
   schema: {
     types: schemaTypes,
   },
