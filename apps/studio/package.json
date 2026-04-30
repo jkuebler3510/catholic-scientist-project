@@ -18,6 +18,7 @@
     "react-dom": "^18.3.0",
     "sanity": "^3.0.0",
     "@sanity/vision": "^3.0.0",
+    "@sanity/scheduled-publishing": "^1.4.1",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
