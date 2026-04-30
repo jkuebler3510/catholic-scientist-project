@@ -47,3 +47,8 @@ pnpm-debug.log*
 # OS
 Thumbs.db
 .env.production.local
+
+# Claude Code
+.claude/settings.local.json
+.claude/worktrees/
+.claude/.DS_Store
