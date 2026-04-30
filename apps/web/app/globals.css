@@ -1,3 +1,211 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font variables will be set by next/font in layout.tsx */
+:root {
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+}
+
+/* Semantic color tokens as CSS variables */
+@layer base {
+  :root {
+    /* Backgrounds */
+    --color-bg-canvas: hsl(40, 35%, 99%);
+    --color-bg-surface: #ffffff;
+    --color-bg-surface-muted: hsl(38, 28%, 96%);
+    --color-bg-inverse: hsl(220, 24%, 6%);
+
+    /* Foreground / Text */
+    --color-fg-default: hsl(220, 22%, 12%);
+    --color-fg-muted: hsl(220, 14%, 32%);
+    --color-fg-subtle: hsl(220, 10%, 45%);
+    --color-fg-on-inverse: hsl(40, 35%, 99%);
+
+    /* Links */
+    --color-fg-link: hsl(36, 75%, 36%);
+    --color-fg-link-hover: hsl(30, 60%, 14%);
+    --color-fg-sacred: hsl(355, 55%, 26%);
+
+    /* Borders */
+    --color-border-default: hsl(36, 20%, 91%);
+    --color-border-strong: hsl(220, 15%, 88%);
+    --color-border-focus: hsl(40, 70%, 48%);
+  }
+
+  /* Base reset */
+  * {
+    @apply border-border-default;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-bg-canvas text-fg-default font-serif;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-semibold;
+  }
+
+  h1 {
+    @apply text-4xl leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl leading-snug tracking-normal;
+  }
+
+  h3 {
+    @apply text-2xl leading-snug tracking-normal;
+  }
+
+  h4 {
+    @apply text-xl leading-snug tracking-normal;
+  }
+
+  h5 {
+    @apply font-sans text-base font-semibold leading-snug;
+  }
+
+  h6 {
+    @apply font-sans text-sm font-semibold leading-normal;
+  }
+
+  /* Body copy rules */
+  p {
+    @apply max-w-prose;
+  }
+
+  /* Focus visible styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-border-focus ring-offset-2;
+  }
+
+  /* Respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      @apply !duration-0 !transition-none;
+    }
+  }
+
+  /* Links */
+  a {
+    @apply text-fg-link hover:text-fg-link-hover transition-colors;
+  }
+
+  /* Code blocks */
+  code {
+    @apply font-mono text-sm;
+  }
+
+  /* Form elements */
+  button,
+  input,
+  select,
+  textarea {
+    @apply font-sans;
+  }
+
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply ring-2 ring-border-focus ring-offset-2;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* Display / Hero typography */
+  .display {
+    @apply text-5xl font-semibold leading-tight tracking-tight;
+  }
+
+  /* Prose wrapper for long-form content */
+  .prose {
+    @apply max-w-prose mx-auto;
+  }
+
+  .prose p {
+    @apply text-base leading-relaxed;
+    hyphens: auto;
+  }
+
+  .prose h2 {
+    @apply text-3xl font-semibold leading-snug mt-8 mb-4;
+  }
+
+  .prose h3 {
+    @apply text-2xl font-semibold leading-snug mt-6 mb-3;
+  }
+
+  .prose h4 {
+    @apply text-xl font-semibold leading-snug mt-4 mb-2;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-gold-500 pl-4 italic text-fg-muted;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply ml-6 space-y-2;
+  }
+
+  .prose li {
+    @apply text-base leading-relaxed;
+  }
+
+  .prose a {
+    @apply text-fg-link hover:text-fg-link-hover underline;
+  }
+
+  /* Drop cap for articles */
+  .prose-dropcap p:first-of-type::first-letter {
+    float: left;
+    font-size: 4em;
+    line-height: 0.85;
+    padding-right: 0.1em;
+    padding-top: 0.05em;
+    font-weight: 600;
+  }
+
+  /* Container widths */
+  .container-prose {
+    @apply max-w-prose mx-auto px-4;
+  }
+
+  .container-content {
+    @apply max-w-content mx-auto px-4;
+  }
+
+  .container-wide {
+    @apply max-w-wide mx-auto px-4;
+  }
+
+  .container-full {
+    @apply max-w-full mx-auto px-4;
+  }
+
+  /* Skip to content link */
+  .skip-to-content {
+    @apply absolute -top-10 left-0 z-skip bg-gold-500 px-4 py-2 text-sm font-semibold text-ink-950 focus-visible:static;
+  }
+
+  /* Divider with ornament */
+  .divider {
+    @apply border-t border-border-default;
+  }
+
+  .divider-ornament {
+    @apply text-center text-2xl text-gold-500 relative top-[-0.85em];
+  }
+}
