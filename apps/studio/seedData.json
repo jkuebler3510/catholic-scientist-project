@@ -1,0 +1,455 @@
+{
+  "siteSettings": {
+    "_type": "siteSettings",
+    "_id": "siteSettings",
+    "siteName": "Society of Catholic Scientists",
+    "tagline": "Science and faith in dialogue",
+    "contactEmail": "hello@catholicscientists.org",
+    "donateUrl": "/donate",
+    "primaryNav": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About",
+        "href": "/about",
+        "children": [
+          {
+            "label": "Mission & Vision",
+            "href": "/about/mission"
+          },
+          {
+            "label": "Leadership",
+            "href": "/about/leadership"
+          },
+          {
+            "label": "FAQ",
+            "href": "/about/faq"
+          }
+        ]
+      },
+      {
+        "label": "News",
+        "href": "/news"
+      },
+      {
+        "label": "Events",
+        "href": "/events"
+      },
+      {
+        "label": "Resources",
+        "href": "/resources"
+      },
+      {
+        "label": "Chapters",
+        "href": "/chapters"
+      },
+      {
+        "label": "Membership",
+        "href": "/membership"
+      }
+    ],
+    "socialLinks": [
+      {
+        "platform": "facebook",
+        "url": "https://www.facebook.com/catholicscientists"
+      },
+      {
+        "platform": "twitter",
+        "url": "https://twitter.com/CatholicScience"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/society-of-catholic-scientists"
+      },
+      {
+        "platform": "youtube",
+        "url": "https://www.youtube.com/channel/UC_placeholder"
+      }
+    ]
+  },
+  "homepage": {
+    "_type": "homepage",
+    "_id": "homepage",
+    "seo": {
+      "title": "Society of Catholic Scientists",
+      "description": "Promoting the interaction of faith and science through education, research, and dialogue.",
+      "noindex": false
+    },
+    "blocks": []
+  },
+  "person": {
+    "_type": "person",
+    "_id": "person-001",
+    "name": "Dr. Maria Santos",
+    "slug": {
+      "current": "maria-santos"
+    },
+    "title": "Professor of Molecular Biology, Boston College",
+    "affiliation": "Boston College",
+    "bio": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "Dr. Santos specializes in genetic research and the philosophy of science. She is an accomplished researcher with over 20 years of experience in molecular biology.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "Dr. Santos specializes in genetic research and the philosophy of science. She is an accomplished researcher with over 20 years of experience in molecular biology.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "roles": ["author", "speaker", "board"]
+  },
+  "category": {
+    "_type": "category",
+    "_id": "category-001",
+    "title": "Science & Faith",
+    "slug": {
+      "current": "science-faith"
+    },
+    "description": "Articles exploring the intersection of science and Catholic faith",
+    "color": "gold-500"
+  },
+  "eventCategory": {
+    "_type": "eventCategory",
+    "_id": "eventCategory-001",
+    "title": "Gold Masses",
+    "slug": {
+      "current": "gold-masses"
+    },
+    "color": "gold-500",
+    "description": "Special masses for Catholic scientists"
+  },
+  "post": {
+    "_type": "post",
+    "_id": "post-001",
+    "title": "New Research Highlights Role of Faith in Scientific Discovery",
+    "slug": {
+      "current": "new-research-highlights-role-of-faith"
+    },
+    "excerpt": "A groundbreaking study shows the important role that faith has played in scientific advancement throughout history.",
+    "publishedAt": "2024-01-15T10:00:00Z",
+    "author": {
+      "_type": "reference",
+      "_ref": "person-001"
+    },
+    "categories": [
+      {
+        "_type": "reference",
+        "_ref": "category-001"
+      }
+    ],
+    "tags": ["research", "faith", "science"],
+    "body": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "Recent research demonstrates the profound connections between religious faith and scientific inquiry. This article explores the findings and their implications for the future of science.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "Recent research demonstrates the profound connections between religious faith and scientific inquiry. This article explores the findings and their implications for the future of science.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "New Research Highlights Role of Faith in Scientific Discovery",
+      "description": "A groundbreaking study shows the important role that faith has played in scientific advancement throughout history.",
+      "noindex": false
+    }
+  },
+  "chapter": {
+    "_type": "chapter",
+    "_id": "chapter-001",
+    "name": "Northeast Chapter",
+    "slug": {
+      "current": "northeast"
+    },
+    "region": "Northeast US",
+    "country": "United States",
+    "city": "Boston",
+    "coordinates": {
+      "lat": 42.3601,
+      "lng": -71.0589
+    },
+    "coordinator": {
+      "_type": "reference",
+      "_ref": "person-001"
+    },
+    "contactEmail": "northeast@catholicscientists.org",
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "The Northeast Chapter brings together Catholic scientists from the Boston area and surrounding regions.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "The Northeast Chapter brings together Catholic scientists from the Boston area and surrounding regions.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Northeast Chapter - Society of Catholic Scientists",
+      "description": "Join the Northeast Chapter of the Society of Catholic Scientists",
+      "noindex": false
+    }
+  },
+  "scientist": {
+    "_type": "scientist",
+    "_id": "scientist-001",
+    "name": "Gregor Mendel",
+    "slug": {
+      "current": "gregor-mendel"
+    },
+    "birthYear": 1822,
+    "deathYear": 1884,
+    "field": "Genetics",
+    "nationality": "Czechoslovak",
+    "summary": "Gregor Mendel was an Augustinian friar and scientist who discovered the fundamental laws of inheritance, laying the foundation for modern genetics.",
+    "body": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "Gregor Mendel was an Augustinian friar and scientist who conducted pioneering experiments on pea plants in the 1860s. His work on heredity became the foundation of modern genetics.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "Gregor Mendel was an Augustinian friar and scientist who conducted pioneering experiments on pea plants in the 1860s. His work on heredity became the foundation of modern genetics.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "keyContributions": ["Laws of heredity", "Foundation of genetics"],
+    "quotes": [
+      {
+        "text": "My scientific studies have convinced me that God created all things with infinite wisdom.",
+        "source": "Personal correspondence"
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Mendel's Garden",
+        "url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+        "description": "Comprehensive overview of Mendel's life and work"
+      }
+    ],
+    "featuredOnHomepage": true,
+    "seo": {
+      "title": "Gregor Mendel - Catholic Scientist",
+      "description": "Gregor Mendel was an Augustinian friar and scientist who discovered the fundamental laws of inheritance.",
+      "noindex": false
+    }
+  },
+  "faqEntry": {
+    "_type": "faqEntry",
+    "_id": "faqEntry-001",
+    "question": "What is the mission of the Society of Catholic Scientists?",
+    "answer": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "The Society of Catholic Scientists promotes dialogue between faith and science, fostering understanding of how Catholic belief enriches scientific inquiry.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "The Society of Catholic Scientists promotes dialogue between faith and science, fostering understanding of how Catholic belief enriches scientific inquiry.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "category": "about",
+    "order": 1
+  },
+  "talk": {
+    "_type": "talk",
+    "_id": "talk-001",
+    "title": "The Harmony Between Science and Faith",
+    "slug": {
+      "current": "harmony-between-science-and-faith"
+    },
+    "speaker": {
+      "_type": "reference",
+      "_ref": "person-001"
+    },
+    "youtubeId": "dQw4w9WgXcQ",
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "In this lecture, Dr. Santos explores how scientific inquiry and faith have historically complemented each other in advancing human understanding.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "In this lecture, Dr. Santos explores how scientific inquiry and faith have historically complemented each other in advancing human understanding.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "durationMinutes": 45,
+    "seo": {
+      "title": "The Harmony Between Science and Faith",
+      "description": "A lecture on the relationship between scientific inquiry and religious faith",
+      "noindex": false
+    }
+  },
+  "event": {
+    "_type": "event",
+    "_id": "event-001",
+    "title": "Winter Gold Mass and Lecture Series",
+    "slug": {
+      "current": "winter-gold-mass-lecture"
+    },
+    "summary": "Join us for an inspiring evening of faith and science",
+    "startDate": "2024-02-15T18:00:00Z",
+    "endDate": "2024-02-15T20:00:00Z",
+    "timezone": "America/New_York",
+    "category": {
+      "_type": "reference",
+      "_ref": "eventCategory-001"
+    },
+    "location": {
+      "venue": "Boston College",
+      "address": "140 Commonwealth Ave",
+      "city": "Boston",
+      "region": "MA",
+      "country": "United States",
+      "geo": {
+        "lat": 42.3354,
+        "lng": -71.1661
+      }
+    },
+    "online": false,
+    "speakers": [
+      {
+        "_type": "reference",
+        "_ref": "person-001"
+      }
+    ],
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "A special Gold Mass followed by a thought-provoking lecture on the intersection of modern science and Catholic faith.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "A special Gold Mass followed by a thought-provoking lecture on the intersection of modern science and Catholic faith.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "registrationFormEnabled": true,
+    "seo": {
+      "title": "Winter Gold Mass and Lecture Series",
+      "description": "Join us for an inspiring evening of faith and science at Boston College",
+      "noindex": false
+    }
+  },
+  "conference": {
+    "_type": "conference",
+    "_id": "conference-001",
+    "title": "Annual Conference",
+    "year": 2024,
+    "slug": {
+      "current": "2024"
+    },
+    "dates": {
+      "start": "2024-07-15T08:00:00Z",
+      "end": "2024-07-17T18:00:00Z"
+    },
+    "location": {
+      "venue": "Notre Dame",
+      "address": "Notre Dame, IN",
+      "city": "South Bend",
+      "region": "IN",
+      "country": "United States",
+      "geo": {
+        "lat": 41.8369,
+        "lng": -86.2454
+      }
+    },
+    "summary": "Our flagship annual conference bringing together Catholic scientists from around the world.",
+    "theme": "Faith, Science, and the Future",
+    "registrationOpen": true,
+    "body": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "The 2024 Annual Conference will feature keynote speakers, research presentations, and networking opportunities for Catholic scientists.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "The 2024 Annual Conference will feature keynote speakers, research presentations, and networking opportunities for Catholic scientists.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "2024 Annual Conference - Society of Catholic Scientists",
+      "description": "Join us for the 2024 Annual Conference at Notre Dame",
+      "noindex": false
+    }
+  },
+  "idea": {
+    "_type": "idea",
+    "_id": "idea-001",
+    "title": "Reflections on the Nature of Scientific Truth",
+    "slug": {
+      "current": "reflections-scientific-truth"
+    },
+    "author": {
+      "_type": "reference",
+      "_ref": "person-001"
+    },
+    "publishedAt": "2024-01-10T10:00:00Z",
+    "excerpt": "An essay exploring how Catholic philosophy informs our understanding of scientific truth and knowledge.",
+    "body": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "text": "This essay examines how Catholic intellectual tradition provides unique perspectives on the nature of scientific knowledge and the limits of empirical inquiry.",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "text": "This essay examines how Catholic intellectual tradition provides unique perspectives on the nature of scientific knowledge and the limits of empirical inquiry.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "_type": "reference",
+        "_ref": "category-001"
+      }
+    ],
+    "seo": {
+      "title": "Reflections on the Nature of Scientific Truth",
+      "description": "An essay on Catholic philosophy and scientific knowledge",
+      "noindex": false
+    }
+  }
+}
